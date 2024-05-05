@@ -1,0 +1,143 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-figtree), sans-serif;
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --wWhite: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 46%);
+  --black: hsl(0, 0%, 7%);
+  --ff-figtree: 'Figtree';
+}
+
+.sr-only {
+  inline-size: 1px;
+  block-size: 1px;
+  font-size: 1px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: -100vw;
+}
+
+.card {
+  margin-top: 4.3rem;
+  padding: 1.45rem;
+  inline-size: clamp(20.4375rem, 87.21vw, 24rem);
+  background-color: var(--wWhite);
+  border: .1rem solid;
+  border-radius: 1.25rem;
+  box-shadow: 8px 8px;
+  overflow: hidden;
+}
+.card__illustration {
+  block-size: 12.5481rem;
+  border-radius: .625rem;
+  overflow: hidden;
+}
+.card__pic {
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.card__category,
+.card__publish-date {
+  font-size: clamp(.75rem, .4rem + 1.5vw, .875rem);
+}
+
+.card__category {
+  display: inline-block;
+  margin-top: 1.68em;
+  padding: .42em .9em;
+  font-weight: 800;
+  background-color: var(--yellow);
+  border-radius: .25rem;
+}
+
+.card__publish-date {
+  margin-top: 1.03em;
+  font-weight: 500;
+}
+
+.card__title {
+  margin-top: .705em;
+  font-size: clamp(1.25rem, .75rem + 2.14vw, 1.5rem);
+  font-weight: 800;
+  letter-spacing: .05px;
+}
+
+.card__description {
+  margin-top: 1.08em;
+  font-size: clamp(.875rem, .55rem + 1.4vw, 1rem);
+  font-weight: 500;
+  color: var(--grey);
+  line-height: 1.5;
+}
+
+.author {
+  margin-top: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: .74em;
+}
+
+.author__avatar {
+  inline-size: 2rem;
+  block-size: 2rem;
+}
+
+.author__name {
+  font-size: .875rem;
+  font-weight: 800;
+}
+
+.attribution {
+  margin-block: 2em;
+  inline-size: fit-content;
+  font-size: .85rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.attribution__cta {
+  margin-inline: .15rem;
+  font-weight: 700;
+  position: relative;
+}
+.attribution__cta::after {
+  content: '';
+  inline-size: 100%;
+  block-size: .15rem;
+  background-color: currentColor;
+  position: absolute;
+  right: 0;
+  bottom: -.15rem;
+  transition: inline-size .3s ease-in-out;
+}
+
+*:focus-visible {
+  outline-offset: .15rem;
+  outline-style: dotted;
+  outline-width: .15rem;
+  outline-color: var(--black);
+}
+
+
+@media (hover:hover) {
+  .card__title:hover {
+    color: var(--yellow);
+    text-shadow: 0 0 1px;
+  }
+  .attribution__cta:hover::after {
+    inline-size: 0;
+    left: 0;
+  }
+}
