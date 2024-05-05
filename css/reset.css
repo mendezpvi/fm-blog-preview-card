@@ -6,12 +6,11 @@ html {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, p, figure {
+body, h1, h2, p, figure {
   margin: 0;
 }
 
 img {
-  /* display: block; */
   max-inline-size: 100%;
   block-size: auto;
   font-style: italic;
