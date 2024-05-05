@@ -130,6 +130,10 @@ body {
   outline-color: var(--black);
 }
 
+.attribution__cta:focus-visible::after {
+  inline-size: 0;
+}
+
 
 @media (hover:hover) {
   .card__title:hover {
